@@ -34,14 +34,28 @@
 
    configuration/index
    🆕 Notification Grouping <configuration/notification-grouping>
-   🆕 AI Analysis <configuration/ai-analysis>
-   🆕 Cost Savings (KRR) <configuration/resource-recommender>
-   🆕 Kubernetes Mis-configurations (Popeye) <configuration/cluster-misconfigurations>
+   🪄 AI Analysis - HolmesGPT <configuration/ai-analysis>
+   Cost Savings - KRR <configuration/resource-recommender>
+   K8s Misconfigurations - Popeye <configuration/cluster-misconfigurations>
    configuration/configuring-sinks
    🔔 Sinks Reference <configuration/sinks/index>
    configuration/alertmanager-integration/index
+   configuration/exporting/exporting-data
    configuration/additional-settings
 
+.. toctree::
+   :maxdepth: 4
+   :caption: 🔔 Notifications & Routing
+   :hidden:
+
+   notification-routing/configuring-sinks
+   🆕 Notification Grouping <notification-routing/notification-grouping>
+   notification-routing/routing-by-namespace
+   notification-routing/routing-by-type
+   notification-routing/routing-by-time
+   notification-routing/routing-exclusion
+   notification-routing/routing-silencing
+   notification-routing/notification-routing-examples
 
 .. toctree::
    :maxdepth: 4
@@ -63,6 +77,8 @@
    :hidden:
 
    help
+   contributing
+   community-tutorials
 
 Better Prometheus Alerts (and more) for Kubernetes
 =====================================================
@@ -75,11 +91,11 @@ Better Prometheus Alerts (and more) for Kubernetes
 
         Robusta extends Prometheus/VictoriaMetrics/Coralogix (and more) with features like:
 
-        * :doc:`Smart Grouping <configuration/notification-grouping>` - reduce notification spam with Slack threads 🧵
+        * :doc:`Smart Grouping <notification-routing/notification-grouping>` - reduce notification spam with Slack threads 🧵
         * :ref:`AI Investigation <AI Analysis>` - Kickstart your alert investigations with AI (optional)
         * :ref:`Alert Enrichment <Automatically Investigate a Prometheus Alert>` - see pods log and other data alongside your alerts
         * :ref:`Self-Healing <Remediate Prometheus Alerts>` - define auto-remediation rules for faster fixes
-        * :ref:`Advanced Routing <Notification Routing>` by team, namespace, k8s metadata and more
+        * :ref:`Advanced Routing <Notification 101>` by team, namespace, k8s metadata and more
         * :ref:`K8s Problem-Detection <Triggers Reference>` - alert on OOMKills or failing Jobs without PromQL
         * :ref:`Change Tracking <Track Kubernetes Changes>` - correlate alerts and Kubernetes rollouts
         * :ref:`Auto-Resolve <Jira>` - send alerts, resolve them when updated (e.g. in Jira)
